@@ -1,0 +1,16 @@
+revoke execute on function public.has_role(uuid, public.app_role) from anon, public;
+revoke execute on function public.my_role() from anon, public;
+revoke execute on function public.is_platform() from anon, public;
+revoke execute on function public.is_platform_manage() from anon, public;
+revoke execute on function public.can_see_bills() from anon, public;
+revoke execute on function public.my_store_id() from anon, public;
+revoke execute on function public.my_supplier_id() from anon, public;
+revoke execute on function public.claim_demo_profile() from anon, public;
+grant execute on function public.has_role(uuid, public.app_role) to authenticated;
+grant execute on function public.my_role() to authenticated;
+grant execute on function public.is_platform() to authenticated;
+grant execute on function public.is_platform_manage() to authenticated;
+grant execute on function public.can_see_bills() to authenticated;
+grant execute on function public.my_store_id() to authenticated;
+grant execute on function public.my_supplier_id() to authenticated;
+grant execute on function public.claim_demo_profile() to authenticated;
